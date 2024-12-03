@@ -1,0 +1,45 @@
+//RESET:
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+//-------------------------------->
+
+//VARIABLES:
+//-----Colors
+$color-object: (
+  "White": hsl(0, 0%, 100%),
+  "Stone-100": hsl(30, 54%, 90%),
+  "Stone-150": hsl(30, 18%, 87%),
+  "Stone-600": hsl(30, 10%, 34%),
+  "Stone-900": hsl(24, 5%, 18%),
+  "Brown-800": hsl(14, 45%, 36%),
+  "Rose-800": hsl(332, 51%, 32%),
+  "Rose-50": hsl(330, 100%, 98%),
+);
+
+$red: red;
+//-----size:
+$mobile: 375px;
+$desktop: 1440px;
+$baseFontSize: 16px;
+
+//FUNCTIONS
+//-----pixels to rem
+@function px-to-rem($pixels) {
+  @return calc($pixels / $baseFontSize) * 1rem;
+}
+
+@function colors($color-name) {
+  @return map-get($color-object, $color-name);
+}
+
+//MIXINS
+//-----media screen:
+
+@mixin mobile {
+  @media (max-width: $mobile), (max-width: $desktop) {
+    @content;
+  }
+}
