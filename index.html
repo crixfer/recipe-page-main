@@ -4,12 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+
+    <!-- SASS -->
     <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- icon -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
+    />
+
+    <!----- FONTS ----->
+    <!-- Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Young Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+      rel="stylesheet"
     />
 
     <title>Frontend Mentor | Recipe page</title>
@@ -24,10 +45,12 @@
           class="omelette"
         />
       </div>
+
       <!--Title-->
       <div class="title-container">
         <h1 class="title">Simple Omelette Recipe</h1>
       </div>
+
       <!-- paragraph -->
       <div class="para-container">
         <p class="description">
@@ -36,25 +59,29 @@
           choice of cheese, vegetables, or meats.
         </p>
       </div>
-      <!-- preparation -->
+
+      <!-- PREPARATION -->
       <div class="preparation-container">
-        <h4>Preparation time</h4>
-        <!-- unordered list -->
-        <div class="ul-preparation">
-          <ul>
-            <li>Total: Approximately 10 minutes</li>
-            <li>Preparation: 5 minutes</li>
-            <li>Cooking: 5 minutes</li>
+        <div class="preparation-title"><h3>Preparation time</h3></div>
+
+        <!-- preparation unordered list -->
+        <div class="ul-box">
+          <ul class="preparation-ul">
+            <li><b>Total:</b> Approximately 10 minutes</li>
+            <li><b>Preparation:</b> 5 minutes</li>
+            <li><b>Cooking:</b> 5 minutes</li>
           </ul>
         </div>
       </div>
-      <!-- ingredients -->
+
+      <!-- INGREDIENTS -->
       <div class="ingredients-subtitle">
         <h2>Ingredients</h2>
       </div>
-      <!-- unordered list -->
-      <div class="ul-ingredients">
-        <ul>
+
+      <!-- ingredients unordered list -->
+      <div class="ingredients-container line">
+        <ul class="ul-ingredients">
           <li>2-3 large eggs</li>
           <li>Salt, to taste</li>
           <li>Pepper, to taste</li>
@@ -64,14 +91,15 @@
           </li>
         </ul>
       </div>
-      <!-- instructions -->
+
+      <!-- INSTRUCTIONS -->
       <div class="instructions-subtitle">
         <h2>Instructions</h2>
       </div>
 
       <!-- ordered list -->
-      <div class="ol-instructions">
-        <ol>
+      <div class="instructions-ol line">
+        <ol class="ol-instructions">
           <li>
             Beat the eggs: In a bowl, beat the eggs with a pinch of salt and
             pepper until they are well mixed. You can add a tablespoon of water
@@ -99,17 +127,31 @@
         </ol>
       </div>
 
-      <!-- nutrition -->
+      <!-- NUTRITION -->
       <div class="nutrition-subtitle"><h2>Nutrition</h2></div>
       <p class="nutrition-parag">
         The table below shows nutritional values per serving without the
         additional fillings.
       </p>
+
+      <!-- values -->
       <div class="nutritional-values">
-        <div class="calories">Calories <span>277kcal</span></div>
-        <div class="carbs">Carbs <span>0g</span></div>
-        <div class="protein">Protein <span>20g</span></div>
-        <div class="fat">Fat <span>22g</span></div>
+        <div class="value-name line">
+          Calories
+          <div class="total">277kcal</div>
+        </div>
+        <div class="value-name line">
+          Carbs
+          <div class="total">0g</div>
+        </div>
+        <div class="value-name line">
+          Protein
+          <div class="total">20g</div>
+        </div>
+        <div class="value-name">
+          Fat
+          <div class="total">22g</div>
+        </div>
       </div>
     </div>
 

@@ -6,7 +6,7 @@
 }
 //-------------------------------->
 
-//VARIABLES:
+//$VARIABLES:
 //-----Colors
 $color-object: (
   "White-0": hsl(0, 0%, 100%),
@@ -18,6 +18,9 @@ $color-object: (
   "Rose-800": hsl(332, 51%, 32%),
   "Rose-50": hsl(330, 100%, 98%),
 );
+//-----Fonts
+$font-Outfit: "Outfit", sans-serif;
+$font-Young-Serif: "Young Serif", serif;
 
 $red: red;
 //-----size:
@@ -25,7 +28,7 @@ $mobile: 375px;
 $desktop: 1440px;
 $baseFontSize: 16px;
 
-//FUNCTIONS
+//@FUNCTIONS
 //-----pixels to rem
 @function px-to-rem($pixels) {
   @return calc($pixels / $baseFontSize) * 1rem;
@@ -35,14 +38,22 @@ $baseFontSize: 16px;
   @return map-get($color-object, $color-name);
 }
 
-//MIXINS
+//@MIXINS
 
+//FLEX
 //-----positioning:
 @mixin flex-center($direction) {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: $direction;
+}
+//-----spacing:
+@mixin flex-spacing($direction) {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: $direction;
+  gap: 28px;
 }
 
 //-----media screen:

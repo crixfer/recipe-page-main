@@ -12,16 +12,78 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: hsl(30, 54%, 90%);
+  height: 220vh;
 }
 
 .container {
-  width: 43.75rem;
   background-color: hsl(0, 0%, 100%);
-  padding: 3.125rem;
   border-radius: 1.25rem;
+  font-family: "Outfit", sans-serif;
+  padding: 3.125rem;
+  width: 46.875rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 28px;
+}
+.container h1,
+.container h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 500;
 }
 
 .omelette {
   width: 100%;
   border-radius: 0.9375rem;
+}
+
+.line {
+  border-bottom: solid 1px hsl(30, 18%, 87%);
+  padding: 1.0625rem 0;
+}
+
+.preparation-container {
+  background-color: hsl(330, 100%, 98%);
+  padding: 1.875rem;
+  border-radius: 0.9375rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 28px;
+}
+.preparation-container .preparation-ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 28px;
+  gap: 0.75rem;
+  padding-left: 1.3125rem;
+}
+.preparation-container .preparation-ul li {
+  padding-left: 1.1875rem;
+}
+
+.ingredients-container,
+.ol-instructions {
+  padding-left: 1.25rem;
+}
+.ingredients-container li,
+.ol-instructions li {
+  padding: 0.5rem 0.8125rem;
+}
+.ingredients-container .ingredients-subtitle,
+.ol-instructions .ingredients-subtitle {
+  margin-bottom: -0.9375rem;
+}
+
+.nutritional-values .nutrition-parag {
+  margin: -0.5rem 0;
+}
+.nutritional-values .value-name {
+  padding: 13px 2.0625rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nutritional-values .total {
+  margin-right: 14.375rem;
 }/*# sourceMappingURL=main.css.map */
