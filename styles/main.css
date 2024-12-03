@@ -12,7 +12,7 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: hsl(30, 54%, 90%);
-  height: 220vh;
+  height: 1955px;
 }
 
 h2 {
@@ -21,7 +21,7 @@ h2 {
 }
 
 b {
-  color: hsl(24, 5%, 18%);
+  color: hsl(30, 10%, 34%);
 }
 
 p {
@@ -102,7 +102,6 @@ ol li::marker {
 }
 .ingredients-container .ul-ingredients li,
 .ol-instructions .ul-ingredients li {
-  list-style-type: square;
   color: hsl(30, 10%, 34%);
 }
 
@@ -129,4 +128,46 @@ ol li::marker {
 .attribution {
   margin-top: 0.625rem;
   font-family: "Outfit", sans-serif;
+}
+
+@media (max-width: 430px) {
+  body .container {
+    border-radius: 0;
+    padding: 0 2.6875rem 2.5rem;
+    width: 25rem;
+    position: relative;
+  }
+  body .title-container {
+    margin-top: 17px;
+  }
+  body .omelette-picture {
+    height: 11.25rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  body .omelette-picture .omelette {
+    width: 100%;
+    border-radius: 0;
+    position: absolute;
+    left: 0;
+  }
+  body .nutrition-parag {
+    width: 310px;
+  }
+  body .nutritional-values {
+    position: relative;
+    width: 100%;
+  }
+  body .nutritional-values .total {
+    margin-left: 8.25rem;
+    width: 3.125rem;
+    position: absolute;
+    text-align: left;
+  }
+  body .attribution {
+    margin: 0.9375rem 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 11px;
+  }
 }/*# sourceMappingURL=main.css.map */
