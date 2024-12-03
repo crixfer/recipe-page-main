@@ -6,17 +6,15 @@
 
 body {
   margin: 3.125rem;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: hsl(30, 54%, 90%);
-  height: 1955px;
 }
 
 h2 {
-  margin: 0 0 -20px 0;
+  margin: 0 0 -1.25rem 0;
   color: hsl(14, 45%, 36%);
 }
 
@@ -131,14 +129,18 @@ ol li::marker {
 }
 
 @media (max-width: 430px) {
+  body {
+    margin: 0;
+  }
   body .container {
     border-radius: 0;
     padding: 0 2.6875rem 2.5rem;
     width: 25rem;
     position: relative;
+    margin-top: 0 !important;
   }
-  body .title-container {
-    margin-top: 17px;
+  body .container .title-container {
+    margin-top: 1.0625rem;
   }
   body .omelette-picture {
     height: 11.25rem;
@@ -168,6 +170,6 @@ ol li::marker {
   body .attribution {
     margin: 0.9375rem 0;
     font-family: "Outfit", sans-serif;
-    font-size: 11px;
+    font-size: 0.8125rem;
   }
 }/*# sourceMappingURL=main.css.map */

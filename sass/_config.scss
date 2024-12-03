@@ -60,7 +60,6 @@ $baseFontSize: 16px;
 
 @mixin space {
   margin: px-to-rem(50px);
-  height: 100vh;
 }
 
 @mixin respond-to($breakpoint) {
