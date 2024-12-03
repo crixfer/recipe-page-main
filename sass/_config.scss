@@ -63,7 +63,7 @@ $baseFontSize: 16px;
   height: 100vh;
 }
 
-@mixin mobile {
+@mixin design-size {
   @media (max-width: $mobile), (max-width: $desktop) {
     @content;
   }
