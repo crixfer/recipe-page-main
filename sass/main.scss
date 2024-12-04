@@ -5,16 +5,15 @@ body {
   @include space;
   @include flex-center(column);
   background-color: colors(Stone-100);
-  height: 220vh;
 }
 
 h2 {
-  margin: 0 0 -20px 0;
+  margin: 0 0 px-to-rem(-20px) 0;
   color: colors(Brown-800);
 }
 
 b {
-  color: colors(Stone-900);
+  color: colors(Stone-600);
 }
 p {
   color: colors(Stone-600);
@@ -101,7 +100,6 @@ ol li::marker {
   }
 
   .ul-ingredients li {
-    list-style-type: square;
     color: colors(Stone-600);
   }
 }
@@ -137,26 +135,76 @@ ol li::marker {
   font-family: $font-Outfit;
 }
 
-// Media query para dispositivos móviles
-@media (max-width: 375px) {
-  .container {
-    width: 100%;
-    height: 100%;
-    padding: px-to-rem(20px);
-  }
+.preparation-container,
+.ingredients-container,
+.ol-instructions {
+  padding-left: 0;
+}
 
-  .preparation-container,
-  .ingredients-container,
-  .ol-instructions {
-    padding-left: 0;
-  }
+.value-name {
+  padding: 0.8rem px-to-rem(10px);
+}
 
-  .value-name {
-    padding: 0.8rem px-to-rem(10px);
-  }
+.total {
+  margin-right: 0;
+  width: auto;
+}
 
-  .total {
-    margin-right: 0;
-    width: auto;
+// MEDIA MOBILE SCREEN -------------------->
+
+@include respond-to(mobile) {
+  body {
+    margin: 0;
+    //container
+    .container {
+      border-radius: 0;
+      padding: 0 px-to-rem(43px) px-to-rem(40px);
+      width: px-to-rem(400px);
+      position: relative;
+      margin-top: 0 !important;
+
+      .title-container {
+        margin-top: px-to-rem(17px);
+      }
+    }
+
+    //picture
+    .omelette-picture {
+      height: px-to-rem(180px);
+      padding: 0;
+      margin: 0;
+      width: 100%;
+
+      .omelette {
+        width: 100%;
+        border-radius: 0;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    //nutrition
+    .nutrition-parag {
+      width: 310px;
+    }
+
+    .nutritional-values {
+      position: relative;
+      width: 100%;
+
+      .total {
+        margin-left: px-to-rem(132px);
+        width: px-to-rem(50px);
+        position: absolute;
+        text-align: left;
+      }
+    }
+
+    // FOOTER
+    .attribution {
+      margin: px-to-rem(15px) 0;
+      font-family: $font-Outfit;
+      font-size: px-to-rem(13px);
+    }
   }
 }

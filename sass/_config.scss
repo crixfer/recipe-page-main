@@ -24,8 +24,8 @@ $font-Young-Serif: "Young Serif", serif;
 
 $red: red;
 //-----size:
-$mobile: 375px;
-$desktop: 1440px;
+// $mobile: 375px;
+// $desktop: 1440px;
 $baseFontSize: 16px;
 
 //@FUNCTIONS
@@ -60,11 +60,20 @@ $baseFontSize: 16px;
 
 @mixin space {
   margin: px-to-rem(50px);
-  height: 100vh;
 }
 
-@mixin design-size {
-  @media (max-width: $mobile) {
-    @content;
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 430px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 768) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $desktop) {
+      @content;
+    }
   }
 }
